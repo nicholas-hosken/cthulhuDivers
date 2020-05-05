@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+
+		<!-- TemplateBeginEditable name="doctitle" -->
+		<title>xxxxxxx | Cthulhu Divers</title>
+		<meta name="description" content="xxxxxxx">
+		<!-- TemplateEndEditable -->
+
+		<meta name="robots" content="INDEX,FOLLOW" />
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+		<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+		<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+		<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+		<!--[if (gte IE 9)|!(IE)]><html lang="en"> <!--<![endif]-->
+
+		<!-- CSS
+	  ================================================= -->
+		<link rel="stylesheet" href="../css/styles.css">
+		
+		<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,700,300,400" rel="stylesheet" type="text/css">
+		<link href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,500,700" rel="stylesheet" type="text/css">
+
+
+		<!-- Favicons
+	  ================================================ -->
+		<link rel="shortcut icon" href="../img/cthulhu-divers-logo-16x16.ico">
+		<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+
+		<!-- TemplateBeginEditable name="head" -->
+		<!-- TemplateEndEditable -->
+	</head>
+
+	<body>
+		<div id="full-container">
+
+			<!-- Navbar -->		
+			<div id="nav">
+		  		<div id="nav-mobile">
+		  			<img src="../img/layout/menu.png" class="burger-menu">
+		  		</div>
+		  		
+				<div id="nav-header">
+					<a href="https://cthulhudivers.com/">
+						<img src="../img/cthulhu-logo-mobile.png">
+					</a>
+				</div>
+				
+				<div id="nav-img">
+					<img src="../img/padi-instructors-available.png" >	
+				</div>
+							
+				<div id="nav-links">
+					<a id="link-home" href="https://cthulhudivers.com/">HOME</a>
+					<a id="link-about" href="#about">ABOUT</a>
+					<a id="link-certified-divers" href="#certified-divers">CERTIFIED DIVERS</a>
+					<a id="link-courses" href="#courses">PADI COURSES</a>
+					<a id="link-bubble-blog" href="#blog">BUBBLE BLOG</a>
+					<a id="link-contact" href="#contact">CONTACT</a>
+				</div>
+			</div>
+			
+			<img src="../img/cover.jpg" style="width: 100%; border-bottom: 1px #fff solid">
+			
+		</div>
+		
+		<script src="../js/cthulhudivers.js"></script>
+	</body>
+</html>
