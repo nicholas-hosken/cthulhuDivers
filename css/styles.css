@@ -48,13 +48,14 @@ strong { font-weight: bold;  }
 		/* Navbar 
 ======================================================*/
 
-#nav {
+#nav-top {
 	height: 100px;
 	line-height: 100px;
 	width: 100%;
 	background-color: #222222;
-	position: relative;
-	border-bottom: 1px #fff solid;
+	position: fixed;
+	border-bottom: 1px solid #fff ;
+  	top: 0;
 }
 
 #nav-header {
@@ -82,15 +83,48 @@ strong { font-weight: bold;  }
 #nav-links > a {
 	display: inline-block;
 	font-family: 'open sans condensed', 'open sans', sans serif;	
-	text-decoration: none;
-	color: #fff;
-	width: 130px;
 	font-size: 16px;
 	font-weight: 700;
+	text-decoration: none;
+	color: #fff;
+	margin-right: 60px;
 }
 
 #nav-links > a:hover {
 	color: #D8D6D6;
+}
+
+#nav-click {
+	margin: 110px 0px 0px 8px;
+	background-color: #222;
+	position: fixed;
+	width: 33%;
+	display:none;
+}
+ 
+#nav-click > a {					
+	text-align: center;
+	text-decoration: none;
+	font-family: 'open sans condensed', 'open sans', sans serif;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+#nav-click > a:hover div {
+	color: #000;
+	background-color: #fff;
+}
+
+#padi-tiny {
+	margin-bottom: -3px;
+}
+
+#nav-click div {						/*new*/
+	border: 1px solid #fff;
+	color: #fff;
+	height: 60px;
+	width: 100%;
+	padding-top: 18px;
 }
 
 #nav-img {
@@ -105,10 +139,10 @@ strong { font-weight: bold;  }
 	float: right;
 }
 
-/* @media 							max-width: 1470px 
+/* @media 							max-width: 1570px 
 ======================================================*/
-@media screen and (max-width: 1470px) {
-	#nav {
+@media screen and (max-width: 1570px) {
+	#nav-top {
 		padding-right: 30px;
 	}
 
@@ -170,14 +204,18 @@ strong { font-weight: bold;  }
 	#nav-header {
 		float: right;
 		width: 75%;
-	}		
+	}
+	
+	#nav-click {
+		width: 50%;
+	}
 }
 
 /*									 max-width: 310px 
 ======================================================*/
 @media screen and (max-width: 310px) {
 	#nav-header {
-		float: right;
+		width: 50%;
 	}		
 }
 

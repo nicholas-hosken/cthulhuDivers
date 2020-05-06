@@ -39,41 +39,54 @@
 
 		<!-- TemplateBeginEditable name="head" -->
 		<!-- TemplateEndEditable -->
-	</head>
+		<script type="text/javascript">
+        </script>
+</head>
 
-	<body>
+	<body onLoad="MM_preloadImages('../img/padi-logo-tiny-black.png')">
 		<div id="full-container">
 
 			<!-- Navbar -->		
 			<div id="nav">
-		  		<div id="nav-mobile">
-		  			<img src="../img/layout/menu.png" class="burger-menu">
-		  		</div>
-		  		
-				<div id="nav-header">
-					<a href="https://cthulhudivers.com/">
-						<img src="../img/cthulhu-logo-mobile.png">
-					</a>
+				<div id="nav-top">
+					<div id="nav-mobile">
+						<img id="nav-burger" src="../img/layout/menu.png">
+					</div>
+
+					<div id="nav-header">
+						<a href="https://cthulhudivers.com/">
+							<img src="../img/cthulhu-logo-mobile.png">
+						</a>
+					</div>
+
+					<div id="nav-img">
+						<img src="../img/padi-instructors-available.png" >	
+					</div>
+
+					<div id="nav-links">
+						<a id="link-home" href="https://cthulhudivers.com/">HOME</a>
+						<a id="link-about" href="#about">ABOUT</a>
+						<a id="link-certified-divers" href="#certified-divers">CERTIFIED DIVERS</a>
+						<a id="link-courses" href="#courses">PADI COURSES</a>
+						<a id="link-bubble-blog" href="#blog">BUBBLE BLOG</a>
+						<a id="link-contact" href="#contact">CONTACT</a>
+					</div>
 				</div>
-				
-				<div id="nav-img">
-					<img src="../img/padi-instructors-available.png" >	
-				</div>
-							
-				<div id="nav-links">
-					<a id="link-home" href="https://cthulhudivers.com/">HOME</a>
-					<a id="link-about" href="#about">ABOUT</a>
-					<a id="link-certified-divers" href="#certified-divers">CERTIFIED DIVERS</a>
-					<a id="link-courses" href="#courses">PADI COURSES</a>
-					<a id="link-bubble-blog" href="#blog">BUBBLE BLOG</a>
-					<a id="link-contact" href="#contact">CONTACT</a>
+				<div id="nav-click">
+					<a href="https://cthulhudivers.com/"><div>HOME</div></a>
+					<a href="#about"><div>ABOUT</div></a>
+					<a href="#certified-divers"><div>CERTIFIED DIVERS</div></a>
+					<a href="#courses" id="nav-click-courses"><div><img src="../img/padi-logo-tiny.png" id="padi-tiny"> COURSES</div></a>
+					<a href="#blog"><div>BUBBLE BLOG</div></a>
+					<a href="#contact"><div>CONTACT</div></a>
 				</div>
 			</div>
 			
-			<img src="../img/cover.jpg" style="width: 100%; border-bottom: 1px #fff solid">
+			<img src="../img/cover.jpg" style="width: 100%; height: 100%; border-bottom: 1px #fff solid">
 			
 		</div>
 		
+		<script src="../js/functions.js"></script>
 		<script src="../js/cthulhudivers.js"></script>
 	</body>
 </html>
