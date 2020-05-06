@@ -50,8 +50,18 @@ const navClickDisplay = function () {
 		} else {
 			navClick.style.display = 'none';
 		}
-	});	
+	});
+	
 };
+
+	window.addEventListener('resize', function () {
+		const navClick = document.querySelector('#nav-click');
+	
+		if (window.innerWidth > 1570) {
+			navClick.style.display = 'none';
+		}		
+	});
+
 
 
 // 	PADI logo color inversion within #nav-click

@@ -39,8 +39,6 @@
 
 		<!-- TemplateBeginEditable name="head" -->
 		<!-- TemplateEndEditable -->
-		<script type="text/javascript">
-        </script>
 </head>
 
 	<body onLoad="MM_preloadImages('../img/padi-logo-tiny-black.png')">
