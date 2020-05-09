@@ -14,8 +14,9 @@ const navDecoration = function () {
 	let line = document.createElement('div'); 
 	line.style.backgroundColor = '#fff';
 	line.style.height = '2px';
-	line.style.width = 'auto';
-	line.style.marginTop = '-40px';
+	line.style.width = '100px';
+	line.style.marginTop = '-35px';
+	line.style.marginLeft = '15px';
 	
 	linkHome.addEventListener('mouseenter', () => { linkHome.appendChild(line); });
 	linkHome.addEventListener('mouseleave', () => { linkHome.removeChild(line); });
@@ -64,8 +65,28 @@ const navClickDisplay = function () {
 
 
 
-// 	PADI logo color inversion within #nav-click
+// 	PADI logo color inversions
 // 	======================================================
 const padiTiny = document.querySelector('#padi-tiny');
 document.querySelector('#nav-click-courses').addEventListener('mouseover', () => { padiTiny.src="../img/padi-logo-tiny-black.png"; });
 document.querySelector('#nav-click-courses').addEventListener('mouseout', () => { padiTiny.src="../img/padi-logo-tiny.png"; });
+
+const padiSmall = document.querySelector('#padi-small');
+document.querySelector('#tron-padi-courses').addEventListener('mouseover', () => { padiSmall.src="../img/padi-logo-small-black.png"; });
+document.querySelector('#tron-padi-courses').addEventListener('mouseout', () => { padiSmall.src="../img/padi-logo-small.png"; });
+
+
+// 	#hoskentron-social image swaps
+// 	======================================================
+const hoskentronTripadvisor = document.querySelector('#hoskentron-tripadvisor');
+document.querySelector('#hoskentron-tripadvisor').addEventListener('mouseover', () => { hoskentronTripadvisor.src="../img/layout/social-tripadvisor.png"; });
+document.querySelector('#hoskentron-tripadvisor').addEventListener('mouseout', () => { hoskentronTripadvisor.src="../img/layout/social-tripadvisor-white.png"; });
+
+const hoskentronInstagram = document.querySelector('#hoskentron-instagram');
+document.querySelector('#hoskentron-instagram').addEventListener('mouseover', () => { hoskentronInstagram.src="../img/layout/social-instagram.png"; });
+document.querySelector('#hoskentron-instagram').addEventListener('mouseout', () => { hoskentronInstagram.src="../img/layout/social-instagram-white.png"; });
+
+const hoskentronFacebook = document.querySelector('#hoskentron-facebook');
+document.querySelector('#hoskentron-facebook').addEventListener('mouseover', () => { hoskentronFacebook.src="../img/layout/social-fb.png"; });
+document.querySelector('#hoskentron-facebook').addEventListener('mouseout', () => { hoskentronFacebook.src="../img/layout/social-fb-white.png"; });
+

@@ -6,8 +6,17 @@ body {
 	margin: 0px;
 	font-family: 'segoe ui';
 	font-family: 'open sans', gill sans, arial, sans serif;
-	background-color: #111111;
+	background-color: #222222;
 }
+
+#hidden-600 {
+	display:none;
+}
+
+#hidden-500 {
+	display:none;
+}
+
 
 		/* Typography 
 ======================================================*/
@@ -38,9 +47,11 @@ h1:after {
 	margin-left: -30px;
 }
 
-p { margin: 0 0 20px 0; }
+p { margin: 0 0 20px 0; color: #fff; }
 p img { margin: 0; }
 p.lead { font-size: 21px; line-height: 27px; color: #777;  }
+
+a { text-decoration: none}
 
 em { font-style: italic; }
 strong { font-weight: bold;  }
@@ -48,11 +59,13 @@ strong { font-weight: bold;  }
 		/* Navbar 
 ======================================================*/
 
+/* 1. Add animation on mouseover. */
+
 #nav-top {
 	height: 100px;
 	line-height: 100px;
 	width: 100%;
-	background-color: #222222;
+	background-color: rgb(34, 34, 34, 0.9);
 	position: fixed;
 	border-bottom: 1px solid #fff ;
   	top: 0;
@@ -63,7 +76,6 @@ strong { font-weight: bold;  }
 	max-height: 100%;
 	float: left;
 	padding: 10px 40px;
-/*	background-color: #0f0;	*/
 }
 
 #nav-mobile {
@@ -71,7 +83,6 @@ strong { font-weight: bold;  }
 	display: none;
 	max-height: 100%;
 	float: left;
-/*	background-color: #f00;	*/
 }
 
 #nav-links {
@@ -87,16 +98,36 @@ strong { font-weight: bold;  }
 	font-weight: 700;
 	text-decoration: none;
 	color: #fff;
-	margin-right: 60px;
 }
 
 #nav-links > a:hover {
-	color: #D8D6D6;
+	color: rgb(255, 255, 255, 1);
+}
+
+#nav-links > a > div {
+	text-align: center;
+	width: 130px;
+	border-bottom: 1px solid #fff;
+	padding-bottom: -50px;
+	height: 100px;
+}
+
+.nav-score {
+	border: 1px solid #222222;
+	margin-top: -29px;
+	width: 0px;
+	transition: 1000ms;
+}
+
+#nav-links > a:hover > div > .nav-score {
+	width: 130px;
+	display: block;
+	border: 1px solid #fff;
 }
 
 #nav-click {
 	margin: 110px 0px 0px 8px;
-	background-color: #222;
+	background-color: rgb(34, 34, 34, 0.99);
 	position: fixed;
 	width: 33%;
 	display:none;
@@ -119,7 +150,7 @@ strong { font-weight: bold;  }
 	margin-bottom: -3px;
 }
 
-#nav-click div {						/*new*/
+#nav-click div {
 	border: 1px solid #fff;
 	color: #fff;
 	height: 60px;
@@ -139,7 +170,101 @@ strong { font-weight: bold;  }
 	float: right;
 }
 
-/* @media 							max-width: 1570px 
+
+		/* Hoskentron 
+======================================================*/
+
+#hoskentron {
+  	background-image: url(../img/cover.jpg);
+	background-size:cover; 
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 1000px;
+	background-color: #444444;
+	border-bottom: 1px solid #fff;
+	text-align:center;
+
+}
+
+#hoskentron-top {
+	width: 100%;
+	height: 500px;
+}
+
+#hoskentron-heading-p {
+	padding-top: 280px;	
+	font-family: 'open sans condensed', 'open sans', sans serif;
+	font-size: 90px;
+	line-height: 70px;
+	letter-spacing: -2px;
+	font-weight: 900;
+}
+
+#hoskentron-sub-p {
+	font-family: 'open sans condensed', 'open sans', sans serif;
+	font-size: 38px;
+	font-weight: 900;
+}
+
+#tron-link-left {
+	margin-right: 10px;
+	display: inline-block;
+}
+
+#hoskentron-bottom > a > div {
+	transition: 500ms;
+}
+
+#tron-link-left:hover div {
+	width: 350px;
+	padding-right: 20px;
+	margin-left: -75px;
+}
+
+#tron-link-right:hover div {
+	width: 350px;
+	padding-left: 20px;
+	margin-right: -75px;
+}
+
+#tron-link-right {
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.tron-button {
+	border: 5px solid #fff;
+	width: 275px;
+	height: 70px;
+	color: #fff;
+	text-decoration: none;
+	font-family: 'open sans condensed', 'open sans', sans serif;
+	font-size: 32px;
+	font-weight: 600;
+	padding-top:8px;
+}
+
+.tron-button:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+#padi-small {
+	margin-bottom: -5px;
+	margin-right: -5px;
+}
+
+#hoskentron-social {
+	margin-top: 40px;
+}
+
+#hoskentron-social a {
+	margin: 40px;
+}
+
+
+		/* @media					max-width: 1570px 
 ======================================================*/
 @media screen and (max-width: 1570px) {
 	#nav-top {
@@ -164,9 +289,10 @@ strong { font-weight: bold;  }
 	#nav-links {
         display: none !important;
     }
+
 }
 
-/*									 max-width: 900px 
+		/*							 max-width: 900px 
 ======================================================*/
 @media screen and (max-width: 900px) {
 	
@@ -198,7 +324,28 @@ strong { font-weight: bold;  }
 	}
 }
 
-/*									 max-width: 500px 
+		/*							 max-width: 600px 
+======================================================*/
+@media screen and (max-width: 600px) {
+	#hoskentron {
+		height: 850px;
+  		background-image: url(../img/cover-vertical2.jpg);
+	}
+	#hoskentron-heading-p {
+		padding-top: 200px;
+	}
+		
+	#tron-link-left,
+	#tron-link-right {
+		margin: 10px auto;
+	}
+	
+	#hidden-600 {
+		display:block;
+	}
+}
+
+		/*							 max-width: 500px 
 ======================================================*/
 @media screen and (max-width: 500px) {
 	#nav-header {
@@ -207,16 +354,22 @@ strong { font-weight: bold;  }
 	}
 	
 	#nav-click {
-		width: 50%;
+		width: 45%;
+	}
+	
+	#hidden-500 {
+		display:block;
 	}
 }
 
-/*									 max-width: 310px 
+		/*							 max-width: 330px 
 ======================================================*/
-@media screen and (max-width: 310px) {
+@media screen and (max-width: 330px) {
 	#nav-header {
-		width: 50%;
-	}		
+		width: 70%;
+	}	
+	
+	#hoskentron-heading-p {
+	font-size: 85px;
+	}
 }
-
-
