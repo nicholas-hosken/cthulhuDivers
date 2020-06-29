@@ -45,7 +45,7 @@
 				<div id="nav-list">
 					<a id="link-about" href="../about.html">ABOUT<div class="nav-score"></div></a>
 					<a id="link-certified-divers" href="../certified-scuba-diving-cancun.html">CERTIFIED DIVERS<div class="nav-score"></div></a>
-					<a id="link-padi-courses" href="../padi-diving-courses-cancun.html">PADI COURSES<div class="nav-score"></div></a>
+					<a id="link-padi-courses" href="padi-diving-courses-cancun.html">PADI COURSES<div class="nav-score"></div></a>
 					<a id="link-blog" href="../blog/cancun-best-dive-sites-for-beginners-and-the-refresher-course.html">BLOG<div class="nav-score"></div></a>
 					<a id="link-contact" href="#contact">CONTACT<div class="nav-score"></div></a>	
 				</div>				
@@ -66,8 +66,63 @@
 				<a href="#contact">CONTACT</a>
 			</div>
 		</nav>
-		<!-- TemplateBeginEditable name="content" -->
+		<!-- TemplateBeginEditable name="hero image" -->
+		<section class="hero-image" style="background-image:url('../img/?########?.jpg')"></section>		
 		<!-- TemplateEndEditable -->
+		<main>
+			<div class="content-positioning">
+				<section id="content-right">
+					<div class="blog-menu">
+						<h5 class="blog-menu-header">Dive Articles</h5>
+						<p><a href="../blog/cancun-best-dive-sites-for-beginners-and-the-refresher-course.html">Cancun's Best Dive Sites</a></p>
+					</div>
+					<div class="blog-menu">
+						<h5 class="blog-menu-header">Playa Mujeres &amp; Cancún Dive Sites</h5>
+						<p><a href="../blog/cancuns-underwater-museum-musa.html">Underwater Museum</a></p>
+					</div>					
+					<div class="blog-menu">
+						<h5 class="blog-menu-header">Cave,Cavern &amp; Cenote Dive Sites</h5>
+						<p><a href="cenote-angelita.html">Angelita</a></p>
+						<p><a href="../blog/cenote-car-wash.html">Car Wash</a></p>
+						<p><a href="../blog/cenote-chac-mool.html">Chac Mool</a></p>
+						<p><a href="../blog/cenote-calavera-temple-of-doom.html">Temple of Doom</a></p>
+					</div>
+					<div class="blog-menu">
+						<h5 class="blog-menu-header">Identification of Marine Species</h5>
+						<p style="text-align: center"><a href="#" style=" padding: 0px">A general fish ID guide</a></p>
+						<hr>
+						<p><a href="../blog/angelfish-identification.html">Angelfish</a></p>
+					</div>
+				</section>
+				<section class="content-left"> 
+				<!-- TemplateBeginEditable name="Blog Article" -->
+				<!-- TemplateEndEditable -->					
+					<div class="show-920">
+						<div class="blog-menu">
+							<h5 class="blog-menu-header">Dive Articles</h5>
+							<p><a href="cancun-best-dive-sites-for-beginners-and-the-refresher-course.html">Cancun's Best Dive Sites</a></p>
+						</div>
+						<div class="blog-menu">
+							<h5 class="blog-menu-header">Playa Mujeres &amp; Cancún Dive Sites</h5>
+							<p><a href="cenote-angelita.html">?########?</a></p>
+						</div>						
+						<div class="blog-menu">
+							<h5 class="blog-menu-header">Cave,Cavern &amp; Cenote Dive Sites</h5>
+							<p><a href="cenote-angelita.html">Angelita</a></p>
+							<p><a href="../blog/cenote-car-wash.html">Car Wash</a></p>
+							<p><a href="../blog/cenote-chac-mool.html">Chac Mool</a></p>
+							<p><a href="../blog/cenote-calavera-temple-of-doom.html">Temple of Doom</a></p>
+						</div>
+						<div class="blog-menu">
+							<h5 class="blog-menu-header">Identification of Marine Species</h5>
+							<p><a href="#">How to ID fish</a></p>
+							<hr>
+							<p><a href="../blog/angelfish-identification.html">Angelfish</a></p>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
 		<footer>
 			<div id="footer-container">
 				<div id="footer-menu">
