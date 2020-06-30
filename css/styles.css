@@ -862,6 +862,10 @@ nav > a {
 	height: 545px;
 }
 
+#panel-img-bull-shark-tour {
+  	background-image: url("../img/pan-bull-shark-tour.jpg");
+	height: 167px;
+}
 		/* 5.0 footer 
 ======================================================*/
 footer {
@@ -1170,6 +1174,10 @@ footer li {
 	#panel-img-whale-shark-snorkel-tour	{
 		height: 500px;
 	}
+	
+	#panel-img-bull-shark-tour {
+		height: 131px;
+	}
 }
 
 		/* 6.2 @media				max-width: 1200px 
@@ -1355,6 +1363,10 @@ footer li {
 	
 	#panel-img-whale-shark-snorkel-tour	{
 		height: 570px;
+	}
+	
+	#panel-img-bull-shark-tour {
+		height: 183px;
 	}
 }
 
