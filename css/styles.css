@@ -633,7 +633,7 @@ nav > a {
 #content-right li:hover > a {
 	margin-left: 11px;
 	font-size: 17px;
-	color: #00aace; /*bb1403*/
+	color: #00aace;
 }
 
 .divider {
@@ -799,6 +799,7 @@ nav > a {
 	margin-bottom: 30px;
 }
 
+
 .blog-link {
 	color: #00aace;
 }
@@ -844,6 +845,16 @@ nav > a {
 #panel-img-padi-courses {
   	background-image: url("../img/pan-padi-courses.jpg");
 	height: 1140px;
+}
+
+#panel-img-snorkeling-tour {
+  	background-image: url("../img/pan-snorkel-tour.jpg");
+	height: 510px;	
+}
+
+#panel-img-dsd {
+  	background-image: url("../img/pan-dsd.jpg");
+	height: 435px;
 }
 
 		/* 5.0 footer 
@@ -1142,6 +1153,14 @@ footer li {
 	#panel-img-padi-courses {
 		height: 2405px
 	}
+	
+	#panel-img-snorkeling-tour {
+		height: 555px;	
+	}
+
+	#panel-img-dsd {
+		height: 350px;
+	}
 }
 
 		/* 6.2 @media				max-width: 1200px 
@@ -1315,7 +1334,15 @@ footer li {
 	
 	#panel-img-padi-courses {
 		height: 2600px;
-	}	
+	}
+
+	#panel-img-snorkeling-tour {
+		height: 570px;	
+	}
+
+	#panel-img-dsd {
+		height: 400px;
+	}
 }
 
 		/*	6.3 @media				 max-width: 920px 
@@ -1371,13 +1398,13 @@ footer li {
 	}
 
 	#price-header {
-		display: block;
 /*		background-color: lightslategray;*/
+		display: block;
 		padding: 3px 0px 0px 0px;
 		margin-top: -43px;
 		margin-left: 700px;
 		margin-bottom: -100px;
-		width: 137px;
+		width: 160px;
 		float: right
 	}
 		
@@ -1537,7 +1564,6 @@ footer li {
 /*		background-color: goldenrod;*/
 		margin-top: -40px;
 		margin-left: 700px;
-		width: 137px;
 	}
 }
 	
@@ -1704,6 +1730,10 @@ footer li {
 	.content-sub-p {
 		margin-left: 20px;
 		margin-right: 20px;		
+	}
+	
+	#price-header {
+		margin-right: 20px;
 	}
 	
 	.standard-text,
