@@ -857,6 +857,11 @@ nav > a {
 	height: 435px;
 }
 
+#panel-img-whale-shark-snorkel-tour {
+  	background-image: url("../img/pan-whale-shark-tour.jpg");
+	height: 545px;
+}
+
 		/* 5.0 footer 
 ======================================================*/
 footer {
@@ -1161,6 +1166,10 @@ footer li {
 	#panel-img-dsd {
 		height: 350px;
 	}
+	
+	#panel-img-whale-shark-snorkel-tour	{
+		height: 500px;
+	}
 }
 
 		/* 6.2 @media				max-width: 1200px 
@@ -1342,6 +1351,10 @@ footer li {
 
 	#panel-img-dsd {
 		height: 400px;
+	}
+	
+	#panel-img-whale-shark-snorkel-tour	{
+		height: 570px;
 	}
 }
 
