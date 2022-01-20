@@ -23,6 +23,7 @@
 	font-family: 'segoe ui';
 	font-family: 'open sans', 'gill sans', 'arial', sans-serif;
 	font-size: 18px;
+	color: #fff;
 }
 
 html,
@@ -33,14 +34,22 @@ body {
     padding: 0;
 }
 
+a[title]:hover:after {
+  	content: attr(title);
+ 	position: absolute;
+	color: #3e3e3e;
+	z-index: -1;
+}
+
 li { list-style-type: none; }
 
 .show-1200,
 .show-920,
 .show-800,
 .show-600,
-.show-500 { 
-	display: none; 
+.show-500,
+.hidden { 
+	display: none !important; 
 }
 
 
@@ -48,7 +57,6 @@ li { list-style-type: none; }
 ======================================================*/
 
 h1, h2, h3, h4, h5, h6  {
-	color: #fff;
 	font-family: 'open sans condensed', 'open sans', sans-serif;
 	font-weight: 900;
 }
@@ -72,16 +80,16 @@ h1:after {
 	margin-left: -30px;
 }
 
-p { margin: 0 0 20px 0; color: #fff; }
+p, .numbered li { margin: 0 20px 20px; line-height: 30px; clear: both; }
 p img { margin: 0; }
 
-a { text-decoration: none; color: #fff }
-em { font-style: italic; text-decoration: none; color: #fff }
+a { text-decoration: none; }
+em { font-style: italic; text-decoration: none; }
 strong { font-weight: bold; }
 
-img, ul, li, th, td { color: #fff; }
-
 blockquote { border-left: 1px solid #ccc; }
+
+.underlined { text-decoration: underline; }
 
 		/* 2.0 Navbar 
 ======================================================*/
@@ -99,16 +107,17 @@ blockquote { border-left: 1px solid #ccc; }
 nav {
 	background-color: rgb(34, 34, 34, 0.9);
 	width: 100%;
-	height: 101px;
+	height: 175px;
 	position: fixed;
 	border-bottom: 1px solid #fff;
-	margin-top: -100px;
+	margin-top: 0px;
+	z-index: 9;
 }
 
 #nav-container {
 	margin: auto;
 	padding-bottom: 30px;
-	width: 1350px;
+	width: 1500px;
 }
 
 #nav-logo {
@@ -118,7 +127,7 @@ nav {
 }
 
 #nav-list {
-	width: 850px;
+	width: 1000px;
 	float: left;
 	margin: 0px -30px 0px 30px;
 }
@@ -130,6 +139,11 @@ nav {
 	text-align: center;
 	font-size: 14px;
 	font-weight: 600;
+}
+
+#nav-spacer {
+	height: 175px;
+	background-color: pink;
 }
 
 #link-about {
@@ -149,7 +163,26 @@ nav {
 }
 
 #link-contact {
-	margin: 0px 100px 0px -100px;
+	margin: 0px 50px 0px -100px;
+}
+
+#languages {
+	width: 140px;
+	padding-top: 20px;
+	display: inline-block;
+}
+
+.flag {
+	width: 27px;
+	height: 19px;
+}
+
+.flag > img {
+	border: 1px solid transparent;
+}
+
+.flag:hover > img {
+	border-color: #fff;
 }
 
 .nav-score {
@@ -183,7 +216,7 @@ nav {
 	padding-top: 30px;
 	padding-left: 32px;
 	width: 100px;
-	height: 100px;
+	height: 50px;
 }
 
 nav > a {
@@ -221,7 +254,7 @@ nav > a {
 	border: 3px solid #fff;
 }
  
-#nav-click > a {					
+#nav-click > .item-burger {					
 	text-align: center;
 	text-decoration: none;
 	font-family: 'open sans condensed', 'open sans', sans-serif;
@@ -229,11 +262,7 @@ nav > a {
 	font-weight: 700;
 	line-height: 50px;
 	display: block;
-	border-bottom: 2px solid #fff;	
-}
-
-#nav-click > a:last-child {
-	border-bottom: none;
+	border-top: 2px solid #fff;	
 }
 
 #nav-click > a:hover {
@@ -255,10 +284,48 @@ nav > a {
 
 #nav-click > div {
 	border: 1px solid #fff;
-	color: #fff;
 	height: 60px;
 	width: 100%;
 	padding-top: 18px;
+}
+
+#sardine-run {
+	border-top: 1px solid #fff;	
+	border-bottom: 1px solid #fff;
+	background-image: url("../img/sardine-run-banner.webp");
+	background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+	font-weight: 700;
+	font-size: 15px;
+	text-align: center;
+	height: 75px;
+	padding: 0 20px;
+	clear: both;
+    width: 100%;
+	text-shadow: 2px 2px #000;
+}
+
+.banner-button > div {
+	background-color: #00aace;
+	border: 2px solid #fff;
+	border-radius: 3px;	
+	width: 275px;
+	height: 35px;
+	margin: auto;
+}
+
+.banner-button > div:hover {
+	background-image: url("../img/flag-button.webp");
+}
+
+.banner-button > div:hover > p {
+	color: #eeb30d;
+	text-shadow: 2px 2px #000;	
+}
+
+.banner-button > div > p {
+	font-size: 16px;
 }
 
 
@@ -266,7 +333,7 @@ nav > a {
 ======================================================*/
 
 #hoskentron {
-  	background-image: url(../img/cover.jpg);
+  	background-image: url(../img/cover.webp);
 	background-size: cover; 
 	background-position: center;
 	width: 100%;
@@ -274,15 +341,15 @@ nav > a {
 	background-color: #444444;
 	border-bottom: 1px solid #fff;
 	text-align: center;
-	margin-top: 100px;
+	margin: 0px 0px 40px;
 }
 
 #hoskentron-top {
-	height: 500px;
+	height: 450px;
 }
 
 #hoskentron-heading-p {
-	padding: 300px 0px 0px;	
+	padding: 250px 0px 0px;	
 	font-family: 'open sans condensed', 'open sans', sans-serif;
 	font-size: 90px;
 	line-height: 70px;
@@ -296,10 +363,6 @@ nav > a {
 	font-weight: 900;
 }
 
-#hoskentron-bottom {
-	margin-top: 60px;
-}
-
 #hoskentron-bottom > a {
 	display: inline-block;
 }
@@ -308,8 +371,6 @@ nav > a {
 #tron-link-right {
 	margin-right: 10px;
 }
-
-#tron-link-right
 
 #padi-bottom {
 	display: inline-block;
@@ -329,6 +390,11 @@ nav > a {
 	font-family: 'open sans condensed', 'open sans', sans-serif;
 	font-size: 32px;
 	margin-top: -48px;
+	transition: 500ms;	
+}
+
+#tron-link-right:hover #padi-text {
+	color: #000;
 }
 
 #hoskentron-bottom > a > div {
@@ -339,7 +405,6 @@ nav > a {
 	border: 5px solid #fff;
 	width: 275px;
 	height: 70px;
-	color: #fff;
 	text-decoration: none;
 	font-family: 'open sans condensed', 'open sans', sans-serif;
 	font-size: 32px;
@@ -382,7 +447,7 @@ nav > a {
 .hero-image {
     width: 100%;
     height: 600px;
- 	margin-top: 100px;
+ 	margin: 0px 0 30px;
 	background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -397,7 +462,7 @@ nav > a {
   	text-justify: inter-word;	
 }
 
-#price-header {
+.price-header {
 	display: none;
 }
 
@@ -406,9 +471,45 @@ nav > a {
 	width: 1100px
 }
 
+.vid-head {
+	margin: 0px auto 30px;
+	padding-bottom: 56.25%;
+	position: relative;
+}
+
+.vid-head > iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.header {
+	margin: 0 0 10px;
+}
+
+.header > h1 {
+	font-size: 60px;
+	margin: 0;
+}
+
+.header > h2 {
+	font-size: 30px;
+	margin: 0;	
+	line-height: 35px
+}
+
+.header > h3 {
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 25px;
+}
+
 .cert-table {	
 	width: 100%;
 	margin-bottom: 50px;
+	border: 1px solid #333;
 }
 
 .cert-table tr {
@@ -438,24 +539,7 @@ nav > a {
 	color:#00dbff;
 }
 
-.content-heading-p {
-	margin: 40px 0px;	
-	font-family: 'open sans condensed', 'open sans', sans-serif;
-	font-size: 70px;
-	line-height: 70px;
-	letter-spacing: -2px;
-	font-weight: 900;
-}
-
-.content-sub-p {
-	font-family: 'open sans condensed', 'open sans', sans-serif;
-	font-size: 38px;
-	font-weight: 900;
-	margin-top: 60px;
-}
-
 .content-supersub {
-	background-color: crimson;
 	font-family: 'open sans condensed', 'open sans', sans-serif;
 	font-size: 28px;
 	font-weight: 900;
@@ -465,24 +549,27 @@ nav > a {
 	float: left;
 }
 
+.content-left ul > li,
 .standard-text {
 	line-height: 30px;
 	clear: both;
 }
 
+.standard-text > a {
+	color: #00aace;
+}
+
+.aqua {
+	color: #00aace;
+}
+
 .switz4 {
-	margin: 60px 0px;	
+	margin: 30px 0px 60px;	
 	text-align: center;
   	text-justify: inter-word;
 }
 
-.marbot {
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-
 .porthole50 {
-
 	width: 300px;
 	display: inline-block;
 	margin: 0px 8px 50px 8px;
@@ -509,12 +596,18 @@ nav > a {
 	transition-duration:  500ms;	
 }
 
-.porthole50:hover > .p50 {
+.porthole50:hover .p50 {
 	letter-spacing: 2px;
 }
 
+.p50-uniform04 {
+	padding: 0 70px;
+}
+
+
 .porthole38 {
 	width: 245px;
+	height: 270px;
 	display: inline-block;
 	margin: 0px 8px 50px 8px;
 }
@@ -536,14 +629,28 @@ nav > a {
 	font-size: 28px;
 	font-weight: 700;
 	letter-spacing: 0px;	
-	transition: 500ms;	
+	transition: 500ms;
+	margin: 0;
+}
+
+.p38-uniform01 {
+	padding: 0 13px;
+}
+
+.p38-uniform03 {
+	padding: 0 60px;
+}
+
+.p38-uniform04,
+.p38-uniform05 {
+	padding: 0 40px;
 }
 
 .suffix38 {
 	font-size: 15px;
 }
 
-.porthole38:hover > .p38 {
+.porthole38:hover .p38 {
 	letter-spacing: 2px;
 }
 
@@ -551,58 +658,49 @@ nav > a {
 	margin-bottom: 0px;
 }
 
+.equal-height {
+	width: 200px;
+	margin: auto;
+}
+
+.padi-line {
+	padding: 0 60px;
+}
+
 #padi-smaller {
 	margin-bottom: -5px;
 	transition: 500ms;		
 }
 
-.price-small {
-	font-size: 15px;
-	font-weight: 600;
-/*	background-color: indianred;*/
-	margin: -7px 0px 0px 0px;
-	float: right;
-}
-
-.price-tiny {
-	font-size: 13px;
-	clear: both;
-	float: right;
-	margin-top: -30px;
-}
-
-.price-large {
-	font-size: 60px;
-	font-weight: 600;
-/*	background-color: darkviolet;*/
-	padding: 0px;
-	float: right;
-	line-height: 30px;
-}
-
 #content-right {
-/*	background-color: indigo;*/
 	width: 230px;
 	float: right;
-	margin-top: 60px;
 	text-align: left;
 }
 
-.price {
-	padding: 10px 50px 90px 0px;
-	margin-bottom: 13px;
+.price-panel {
+	padding: 0 0;
+	margin: 40px 0 18px;
 }
 
-#panel-price {
-	border-bottom: 1px solid #fff;
+.price-panel-number {
+	font-size: 60px;
+	font-weight: 900;
+	float: right;
+	line-height: 38px;
+	height: 38px;
+}
+
+.price-panel-from {
+	margin: 0;
+	float: right;
 }
 
 .panel-menu-header {
 	font-weight: 600;
 	font-size: 25px;
-	margin: 10px 0px 0px 0px;
-	padding: 20px 0px 5px 10px ;
-	border-top: 1px solid #fff;
+	margin: 0;
+	padding: 10px 0px 5px 10px ;
 	clear: both;
 }
 
@@ -652,52 +750,73 @@ nav > a {
 	clear: both;
 }
 
-.porthole22-off {
-/*	background-color: teal;*/
+.staff-member {
+	width: 1075px;
+	margin: 0 25px;
 }
 
-.porthole22-off:last-child {
-	margin-bottom: 30px;
+.staff-member:last-child .staff-text {
+	margin-bottom: 80px;
 }
 
-.porthole22-off-even {
-	margin-right: 50px
-}
-
-.light22 {
-/*	background-color: indianred;*/
-	width: 224px;
-	margin: 30px auto 0px; 
+.staff-img-left {
 	float: left;
+	max-width: 300px;	
 }
 
-.light22-right {
-/*	background-color: indianred;*/
-	width: 224px;
-	margin: 20px 60px;
+.staff-img-right {
 	float: right;
-/*	display: none;*/
+	margin-right: 25px;
+	max-width: 300px;
 }
 
-.bullet-info {
-/*	background-color: indigo;*/
-	width: 750px
+.staff-header-left {
+	height: 50px;
+	width: 730px;
+	float: left;
+	margin-top: 25px;
 }
 
-.bullet-info-even {
-/*	background-color: fuchsia;*/
+.staff-header-right {
+	height: 50px;
+	width: 730px;
 	float: right;
-	margin-bottom: 30px;
+	margin-top: 25px;
+	margin-right: 25px;	
 }
 
-.bullet-info-minor {
-	line-height: 15px;
-	font-size: 12px;
-	padding: 0px;
-	margin: 4px 15px 0px 15px;
-	font-family:  'open sans', 'open sans condensed', sans-serif;
-	letter-spacing: 1px;
-	font-weight: 600;
+.staff-name {
+	float: left;
+	font-family: 'open sans condensed', 'open sans', sans-serif;
+	font-size: 28px;
+	font-weight: 900;
+	padding-top: 19px;
+	margin: 0px;
+}
+
+.staff-pos {
+	text-align: right;
+	padding-top: 5px
+}
+
+.staff-text-left {
+	width: 730px;
+	float: left;
+	margin-bottom: 40px;	
+}
+
+.staff-text-right {
+	width: 730px;
+	float: right;
+	margin-bottom: 40px;
+	margin-right: 25px;
+}
+
+.staff-text {
+	text-align: justify;
+	line-height: 30px;
+	clear: left;
+	margin: 10px 0;
 }
 
 .padi-no {
@@ -705,19 +824,6 @@ nav > a {
 	font-size: 12px;
 	font-family:  'open sans', 'open sans condensed', sans-serif;
 	color: #00aace;
-}
-
-.staff-pos {
-/*	background-color: cornflowerblue;*/
-	float: right;
-	margin: 40px 0px 0px; 
-	padding: 0px;
-}
-
-.staff-text {
-	text-align: justify;
-	line-height: 30px;
-	clear: left;
 }
 
 .bullet22-p {
@@ -748,6 +854,7 @@ nav > a {
 	padding-left: 20px;
 	font-size: 14px;
 	margin-bottom: 0px;
+	color: #fff;
 }
 
 .blog-menu > p:hover > a {
@@ -759,7 +866,6 @@ nav > a {
 }
 
 .blog-author {
-/*	background-color: indianred;*/
 	margin: -30px 0px 0px 0px;
 }
 
@@ -776,35 +882,85 @@ nav > a {
 	border-radius: 15px;
 }
 
+.sr-img {
+	width: 100%;
+	margin: 15px 0px;
+}
+
 .blog-sub-info {
 	line-height: 20px;
 	margin-left: 15px;
 	margin-right: 15px;
 }
+
+.blog-header-lead {
+	font-weight: 300;
+	font-style: italic;
+	margin: -10px 0 0;
+}
+
 .blog-lead {
 	color: #ddd;
 	font-weight: 300;
 }
 
+.content-sub-p {
+	font-family: 'open sans condensed', 'open sans', sans-serif;
+	font-size: 38px;
+	font-weight: 900;
+	margin-top: 25px;
+	line-height: 1.1;
+}
+
 .blog-sub-p-spacing {
 	line-height: 30px;
-	margin: -35px 0px 40px;
+	margin: -55px 0px 40px;
 	font-size: 30px;
 }
 
-.content-left iframe {
-	width: 1100px; 
-	height: 619px;
-	border-radius: 15px;
-	margin-bottom: 30px;
+.price-heading {
+	font-size: 25px;
+	font-weight: 300;
+	margin: -40px 0 20px;
 }
 
+#yt-vid {
+	width: 1100px;
+	padding-bottom: 56.25%;
+	position: relative;
+	margin: 0 0 30px -550px;
+}
 
-.blog-link {
+#yt-vid > iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+	border: 3px solid #fff;
+}
+
+.sr-img-description {
+	border: 1px solid #fff;
+	width: 500px;
+	margin: 0 auto 15px;
+	padding-bottom: 7px;
+	display: inline-block;
+}
+
+.sr-img-description p {
+	color: #00aace;
+	margin-bottom: 0px;
+}
+
+.important-info {
+	color: #df0020;
+}
+
+.content-left a {
 	color: #00aace;
 }
 
-.blog-link:hover {
+.content-left a:hover {
 	color: #00dbff;
 }
 
@@ -824,53 +980,428 @@ nav > a {
 	font-weight: 700;
 }
 
+.list-bulleted {
+	margin-left: 30px;
+	margin-right: 10px;
+}
+
+.list-bulleted > li {
+	list-style: disc;
+	text-align: left;
+}
+
+.form-area {
+	display: flex;
+	flex-direction: column;
+}
+
+.form {
+	border: 2px solid #fff;
+	border-radius: 15px;
+	width: auto;
+	padding: 15px;
+	margin: 35px;
+	margin-bottom: 40px;
+	text-align: left;
+}
+
+.form input,
+.form textarea {
+	width: 100%;
+	border: 5px solid #fff;
+	border-radius: 5px;
+	color: #000;
+	margin-bottom: 20px;
+	transition: 0.3s;	
+}
+
+.form textarea {
+	height: 300px;
+	margin-bottom: 20px;
+	resize: none;
+}
+
+.form input[type=text]:hover,
+.form input[type=email]:hover,
+.form input[type=tel]:hover,
+.form textarea:hover {
+	box-shadow: 0px 0px 20px #00aace;	
+}
+
+
+.form input[type=text]:focus,
+.form input[type=email]:focus,
+.form input[type=tel]:focus,
+.form textarea:focus {
+  	border: 5px solid #00aace;
+
+}
+
+.form button {
+	background-color: #00aace;
+	width: 100%;
+	height: 40px;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	color: #fff;
+	transition: 0.3s;
+}
+
+.form button:hover,
+.form button:focus {
+	background-color: #00aace;
+	width: 100%;
+	height: 40px;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	color: #fff;
+	box-shadow: 0px 0px 20px #fff;
+
+}
+
+#status {
+	text-align: center;
+	border-radius: 5px;
+	padding-top: 200px;
+	height: 100%;
+	margin: auto;
+}
+
+#status.success {
+	background-color: #27d989;
+	animation: status 4s ease forwards;
+	border: 1px solid #fff;	
+}
+
+#status.error {
+	background-color: #d92727;
+	animation: status 4s ease forwards;
+	border: 1px solid #fff;	
+}
+
+@keyframes status {
+	0% {
+		opacity: 1;
+		pointer-events: all;
+	}
+	90% {
+		opacity: 1;
+		pointer-events: all;
+	}
+	100% {
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+
+.sitemap-text {
+	margin: 0px 25px 40px;
+}
+
+.sitemap-text > ul > li {
+	text-align: left;
+	list-style: disc;
+}
+
+.sitemap-text .blog-header-lead {
+	text-align: left;
+}
+
 .panel-img {
 	width: 230px;
 	background-color: #00aace;
 	padding-top: 130px;
+	margin-top: 26px;
 	background-size: cover; 
 	background-position: center;
 }
 
+.panel-img-sr {
+	margin-bottom: -1px;
+}
+
+.checklistheader {
+	text-align: center;
+	margin-top: 20px
+}
+
+.checklist {
+	text-align: left;
+	margin: 20px;
+}
+
+.checklist label {
+	padding: 20px;
+}
+
+.pdf-download {
+	display: inline-block;
+}
+
+.pdf-download > div,
+#brochure-swap {
+	color: #fff;
+	background-color: #00aace;
+	border: 2px solid #fff;
+	border-radius: 3px;	
+	margin: 15px auto 0px;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 5px;
+	width: 350px;
+}
+
+#brochure-swap {
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+
+.pdf-download:hover > div,
+#brochure-swap:hover {
+	background-color: #fff;
+	color: #00aace;
+	border-color: #00aace;
+}
+
+.brochure {
+	width: 1100px;
+	height: 1556px;
+	border: 10px solid #fff;
+	margin-bottom: 20px;
+}
+
+.sardine-run-reel-acc {
+	margin: 10px;
+	padding: 5px;
+	border: 2px solid #fff;
+}
+
+.sr-li-left {
+	float: left;
+	width: 50%;
+	text-align: left;
+	margin-bottom: 15px;
+}
+
+.sr-li-left > li {
+	list-style-type: circle;
+	margin: 0 0 15px 180px;
+}
+
+.sr-li-clear {
+	clear: both;
+}
+
+/*Panel Images
+======================================================*/
+
 #panel-img-about {
-	background-image: url("../img/pan-about.jpg");
-	height: 980px;
+	background-image: url("../img/pan-about.webp");
+	height: 1030px;
 }
 
-#panel-img-certified-divers {
-  	background-image: url(../img/pan-certified-divers.jpg);
-	height: 1795px;
-}
-
-#panel-img-padi-courses {
-  	background-image: url("../img/pan-padi-courses.jpg");
-	height: 1140px;
-}
-
-#panel-img-snorkeling-tour {
-  	background-image: url("../img/pan-snorkel-tour.jpg");
-	height: 510px;	
-}
-
-#panel-img-dsd {
-  	background-image: url("../img/pan-dsd.jpg");
-	height: 435px;
-}
-
-#panel-img-whale-shark-snorkel-tour {
-  	background-image: url("../img/pan-whale-shark-tour.jpg");
-	height: 545px;
+#panel-img-advanced-open-water {
+  	background-image: url("../img/pan-padi-advanced-open-water.webp");
+	height: 1262px;
 }
 
 #panel-img-bull-shark-tour {
-  	background-image: url("../img/pan-bull-shark-tour.jpg");
-	height: 167px;
+  	background-image: url("../img/pan-bull-shark-tour.webp");
+	height: 323px;
 }
-		/* 5.0 footer 
+
+#panel-img-certified-divers {
+  	background-image: url(../img/pan-certified-divers.webp);
+	height: 1816px;
+}
+
+#panel-img-chichen-itza {
+  	background-image: url(../img/pan-chichén-itzá.webp);
+	height: 1002px;
+}
+
+#panel-img-chichen-itza-early-bird {
+  	background-image: url(../img/pan-chichén-itzá-early-bird.webp);
+	height: 1446px;
+}
+
+#panel-img-contact {
+  	background-image: url(../img/pan-contact.webp);
+	height: 357px;	
+}
+
+#panel-img-discover-local-diving {
+  	background-image: url("../img/pan-padi-discover-local-diving.webp");
+	height: 477px;	
+}
+
+#panel-img-dsd {
+  	background-image: url("../img/pan-dsd.webp");
+	height: 403px;
+}
+
+#panel-img-landlubber {
+  	background-image: url("../img/pan-landlubber.webp");
+	height: 1230px;
+}
+
+#panel-img-padi-courses {
+  	background-image: url("../img/pan-padi-courses.webp");
+	height: 1000px;
+}
+
+#panel-img-padi-diving-refresher-course {
+  	background-image: url("../img/pan-padi-diving-refresher-course.webp");
+	height: 731px;
+}
+
+#panel-img-padi-open-water-diver {
+  	background-image: url("../img/pan-padi-open-water-diver.webp");
+	height: 742px;
+}
+
+#panel-img-padi-scuba-diver {
+  	background-image: url("../img/pan-padi-scuba-diver-course.webp");
+	height: 820px;
+}
+
+#panel-img-sardine-run {
+  	background-image: url("../img/pan-sardine-run.webp");
+	height: 731px;
+}
+
+#panel-img-sardine-run-pg01 {
+  	background-image: url("../img/pan-sardine-run-pg01.webp");
+}
+
+#panel-img-sardine-run-pg02 {
+  	background-image: url("../img/pan-sardine-run-pg02.webp");
+}
+
+#panel-img-sardine-run-pg03 {
+  	background-image: url("../img/pan-sardine-run-pg03.webp");
+}
+
+#panel-img-sardine-run-pg04 {
+  	background-image: url("../img/pan-sardine-run-pg04.webp");
+}
+
+#panel-img-sardine-run-pg05 {
+  	background-image: url("../img/pan-sardine-run-pg05.webp");
+	background-repeat: no-repeat;
+    background-position: 50% 90%;
+}
+
+#panel-img-sardine-run-pg06 {
+  	background-image: url("../img/pan-sardine-run-pg06.webp");
+}
+
+#panel-img-sardine-run-pg07 {
+  	background-image: url("../img/pan-sardine-run-pg07.webp");
+}
+
+#panel-img-sardine-run-pg08 {
+  	background-image: url("../img/pan-sardine-run-pg08.webp");
+}
+
+#panel-img-sardine-run-pg09 {
+  	background-image: url("../img/pan-sardine-run-pg09.webp");
+}
+
+#panel-img-sardine-run-pg10 {
+  	background-image: url("../img/pan-sardine-run-pg10.webp");
+}
+
+#panel-img-sardine-run-pg11 {
+  	background-image: url("../img/pan-sardine-run-pg11.webp");
+}
+
+#panel-img-sardine-run-pg12 {
+  	background-image: url("../img/pan-sardine-run-pg12.webp");
+}
+
+#panel-img-sardine-run-pg13 {
+  	background-image: url("../img/pan-sardine-run-pg13.webp");
+}
+
+#panel-img-sardine-run-pg14 {
+  	background-image: url("../img/pan-sardine-run-pg14.webp");
+}
+
+#panel-img-sardine-run-pg15 {
+  	background-image: url("../img/pan-sardine-run-pg15.webp");
+}
+
+#panel-img-sardine-run-pg16 {
+  	background-image: url("../img/pan-sardine-run-pg16.webp");
+}
+
+#panel-img-sardine-run-pg17 {
+  	background-image: url("../img/pan-sardine-run-pg17.webp");
+}
+
+#panel-img-sardine-run-pg18 {
+  	background-image: url("../img/pan-sardine-run-pg18.webp");
+	height: 1548px;
+	margin-bottom: -1px;
+}
+
+#panel-img-sardine-run-pg19 {
+  	background-image: url("../img/pan-sardine-run-pg19.webp");
+	display: none;
+}
+
+#panel-img-sardine-run-pg20 {
+  	background-image: url("../img/pan-sardine-run-pg20.webp");
+	display: none;
+}
+
+#panel-img-sardine-run-pg21 {
+  	background-image: url("../img/pan-sardine-run-pg21.webp");
+	display: none;
+}
+
+#panel-img-sardine-run-pg01,
+#panel-img-sardine-run-pg02,
+#panel-img-sardine-run-pg03,
+#panel-img-sardine-run-pg04,
+#panel-img-sardine-run-pg05,
+#panel-img-sardine-run-pg06,
+#panel-img-sardine-run-pg07,
+#panel-img-sardine-run-pg08,
+#panel-img-sardine-run-pg09,
+#panel-img-sardine-run-pg10,
+#panel-img-sardine-run-pg11,
+#panel-img-sardine-run-pg12,
+#panel-img-sardine-run-pg13,
+#panel-img-sardine-run-pg14,
+#panel-img-sardine-run-pg15,
+#panel-img-sardine-run-pg16,
+#panel-img-sardine-run-pg17 {
+	height: 1556px;
+	margin-bottom: -1px;
+}
+
+#panel-img-sitemap {
+  	background-image: url("../img/pan-sitemap.webp");
+	height: 600px;
+}
+
+#panel-img-snorkeling-tour {
+  	background-image: url("../img/pan-snorkel-tour.webp");
+	height: 576px;	
+}
+
+#panel-img-whale-shark-snorkel-tour {
+  	background-image: url("../img/pan-whale-shark-tour.webp");
+	height: 478px;
+}
+
+
+	/* 5.0 footer 
 ======================================================*/
 footer {
 	background-color: #171717;
-/*	background-color: red;*/
 	border-top: 1px solid #fff;
 	text-align: center;
   	text-justify: inter-word;
@@ -883,7 +1414,6 @@ footer {
 	height: 400px;
 	margin: auto;
 	transition: 300ms;
-/*	background-color: teal;*/
 }
 
 #footer-menu,
@@ -892,7 +1422,6 @@ footer {
 	height: 350px;
 	float: left;
 	transition: 300ms;
-/*	background-color: orchid;*/
 }
 
 footer ul,
@@ -979,15 +1508,14 @@ footer li {
 		/* 6.1 @media				max-width: 1500px 
 ======================================================*/
 @media screen and (max-width: 1500px) {
-	.hidden-1500 {
-		display:block;
+	.hide-1500 {
+		display: none;
 	}
 	
 	#nav-container,
 	.content-positioning,
 	#footer-container {
 		width: 1100px;
-/*		background-color: olive;*/
 	}
 	
 	.split {
@@ -1036,6 +1564,11 @@ footer li {
 		margin-left: 18px;
 	}
 
+	#languages {
+		float: right;
+		margin-right: 65px;
+	}
+	
 	.porthole50,
 	.light50 {
 		width: 250px;
@@ -1045,65 +1578,66 @@ footer li {
 		font-size: 20px;
 	}
 	
+	.p50-uniform03,
+	.p50-uniform05,
+	.p50-uniform08 {
+		padding: 0 30px;
+	}
+	
+	.p50-uniform06,
+	.p50-uniform07 {
+		padding: 0 50px;
+	}
+	
 	#padi-smaller {
 		width: 23px;
 		height: 22px;
 	}
 
 	.porthole38 {
-/*		background-color: aliceblue*/
 		margin-left: 38px;
 		margin-right: 38px;
-		width: 245px;
+		width: 300px;
+		height: 350px;
+		border-bottom: 1px solid #ccc;
 	}
 	
+	.p38-uniform01,
+	.p38-uniform02 {
+		padding: 0 40px;
+	}
+
+	.p38-uniform03 {
+		padding: 0 90px;
+	}
+	
+	.p38-uniform05 {
+		padding: 0 70px;
+	}
+
 	#footer-menu,
 	#footer-address {
 		width: 375px;
 	}
 	
 	.content-left {
-/*		background-color: indigo;*/
 		width: 850px;
 	}
 	
-	.porthole38 {
-		width: 300px;
-		border-bottom: 1px solid #ccc;
+	.brochure {
+		width: 850px;
+		height: 1202px;
 	}
-
+	
 	.cert-table th:last-child,
 	.cert-table td:last-child {
 		display: none;
 	}
 	
 	#content-right {
-/*		background-color: indigo;*/
 		width: 230px;
 		float: right;
-		margin-top: 60px;
 		text-align: left;
-	}
-	
-	.price {
-		padding-right: 20px;		
-	}
-	
-	.price-small {
-/*		background-color: indianred;*/
-		font-size: 15px;
-		font-weight: 600;
-		margin: -7px 0px 0px 0px;
-		float: right
-	}
-	
-	.price-large {
-/*		background-color: darkviolet;*/
-		font-size: 60px;
-		font-weight: 600;
-		padding: 0px;
-		float: right;
-		line-height: 30px;
 	}
 	
 	.panel-menu-header {
@@ -1121,62 +1655,144 @@ footer li {
 		color: #00aace;
 	}
 	
-	.porthole22-off {
-/*		background-color: indianred;*/
+	.staff-member {
+		width: 800px;
 	}
 	
-	.porthole22-off-even {
-		margin-right: 0px;
-		margin-bottom: 280px
-	}
-	.bullet-info {
-/*		background-color: indigo;*/
-		width: 523px;
-		margin-right: 10px;
-		height: 350px;
+	.staff-img-left,
+	.staff-img-right {
+		margin: 30px 0;
 	}
 	
-	.light22 {
-		width: 300px;
+	.staff-header-left,
+	.staff-text-left{
+		width: 500px;
+		margin: 0;
+		padding: 0 30px 0 0;
 	}
 	
-	.light22-right {
-		width: 300px;
-		margin: 28px 13px;
-		float: right;
+	.staff-header-right,
+	.staff-text-right {
+		width: 500px;
+		margin: 0;
+		padding: 0 0 0 30px;
+	}
+	
+	.staff-text-left,
+	.staff-text-right {
+		margin-bottom: 40px;
+		height: auto;
+	}
+	
+	.staff-member:last-child .staff-text {
+		margin-bottom: 0px;
+	}
+	
+
+	#yt-vid {
+		width: 850px;
+		margin: 0 0 30px -430px;
+	}
+	
+	.sr-li-left > li {
+		margin-left: 120px;
 	}
 
-	.content-left iframe {
-		width: 850px; 
-		height: 478px;
-	}
 	
 	#panel-img-about {
-		height: 1345px;
+		height: 1340px;
+	}
+	
+	#panel-img-advanced-open-water {
+		height: 1401px;
+	}
+
+	#panel-img-bull-shark-tour {
+		height: 248px;
 	}
 	
 	#panel-img-certified-divers {
-		height: 1915px;
+		height: 1907px;
+	}
+	
+	#panel-img-chichen-itza {
+		height: 1110px;
+	}
+
+	#panel-img-chichen-itza-early-bird {
+		height: 1485px;
+	}
+	
+	#panel-img-contact {
+		height: 388px;	
+	}
+
+	#panel-img-discover-local-diving {
+		height: 396px;	
+	}
+
+	#panel-img-dsd {
+		height: 352px;
+	}
+	
+	#panel-img-landlubber {
+		height: 3165px;
 	}
 	
 	#panel-img-padi-courses {
-		height: 2405px
+		height: 2455px
 	}
+	
+	#panel-img-padi-diving-refresher-course {
+		height: 710px;
+	}
+	
+	#panel-img-padi-open-water-diver {
+		height: 720px;
+	}
+
+	#panel-img-padi-scuba-diver {
+		height: 856px;
+	}
+	
+	#panel-img-sardine-run {
+		height: 650px;
+	}
+	
+	#panel-img-sardine-run-pg01,
+	#panel-img-sardine-run-pg02,
+	#panel-img-sardine-run-pg03,
+	#panel-img-sardine-run-pg04,
+	#panel-img-sardine-run-pg05,
+	#panel-img-sardine-run-pg06,
+	#panel-img-sardine-run-pg07,
+	#panel-img-sardine-run-pg08,
+	#panel-img-sardine-run-pg09,
+	#panel-img-sardine-run-pg10,
+	#panel-img-sardine-run-pg11,
+	#panel-img-sardine-run-pg12,
+	#panel-img-sardine-run-pg13,
+	#panel-img-sardine-run-pg14,
+	#panel-img-sardine-run-pg15,
+	#panel-img-sardine-run-pg16,
+	#panel-img-sardine-run-pg17,
+	#panel-img-sardine-run-pg18 {
+		height: 1202px;
+		margin-bottom: -1px;
+	}
+	
+	#panel-img-sardine-run-pg19 {
+		height: 1099px;
+		display: block;
+	}
+	
 	
 	#panel-img-snorkeling-tour {
 		height: 555px;	
 	}
 
-	#panel-img-dsd {
-		height: 350px;
-	}
-	
 	#panel-img-whale-shark-snorkel-tour	{
-		height: 500px;
-	}
-	
-	#panel-img-bull-shark-tour {
-		height: 131px;
+		height: 427px;
 	}
 }
 
@@ -1228,6 +1844,10 @@ footer li {
 		height: 75px;
 		margin-top: 13px;
 	}
+	
+	#languages {
+		margin-right: 55px;
+	}
 
 	.hero-image {
 		height: 500px;	
@@ -1245,6 +1865,19 @@ footer li {
 		font-size: 30px;
 	}
 
+	.p50-uniform01,
+	.p50-uniform02,
+	.p50-uniform08 {
+		padding: 0 80px;
+	}
+	
+	.p50-uniform03,
+	.p50-uniform04,
+	.p50-uniform05,
+	.p50-uniform06 {
+		padding: 0;
+	}
+		
 	#padi-smaller {
 		width: 33px;
 		height: 31px;
@@ -1256,6 +1889,45 @@ footer li {
 		margin-right: 38px;
 	}
 	
+	.p38-uniform01 {
+		padding: 0 13px;
+	}
+
+	.p38-uniform02 {
+		padding: 0;
+	}
+	
+	.p38-uniform03,
+	.p38-uniform05 {
+		padding: 0 60px;
+	}
+
+	.staff-member {
+		width: 100%;
+		margin: 0px;
+		padding: 25px;
+	}
+
+	.staff-img-left,
+	.staff-img-right {
+		float: none;
+		margin: 0;
+	}
+	
+	.staff-header-left,
+	.staff-text-left,
+	.staff-header-right,
+	.staff-text-right {
+		width: 100%;
+		height: auto;
+		padding: 0;
+	}
+
+	.staff-pos {
+		margin-top: 0;
+		margin-right: 0px;
+	}
+
 	#footer-menu,
 	#footer-address {
 		width: 275px;
@@ -1265,30 +1937,13 @@ footer li {
 		width: 650px;
 	}
 	
-	#content-right {
-		width: 230px;
-	}
-	
-	.price {
-/*		background-color: forestgreen;*/
-		padding-right: 20px
-	}
-	
-	.price-small {
-		font-size: 15px;
-		font-weight: 600;
-/*		background-color: indianred;*/
-		margin: -7px 0px 0px 0px;
-		float: right
+	.brochure {
+		width: 650px;
+		height: 919px;
 	}
 
-	.price-large {
-		font-size: 60px;
-		font-weight: 600;
-/*		background-color: darkviolet;*/
-		padding: 0px;
-		float: right;
-		line-height: 30px;
+	#content-right {
+		width: 230px;
 	}
 	
 	.panel-menu-header {
@@ -1306,67 +1961,124 @@ footer li {
 		color: #00aace;
 	}
 	
-	.content-left iframe {
+	#yt-vid {
 		width: 650px;
-		height: 366px;
-	}
-	
-	
-	.panel-img {
-		width: 230px;	
+		margin: 0 0 30px -325px;
 	}
 
-	.light22,
-	.light22-right{
-		float: none;
-		width: 300px;
-		margin: 0px auto;
-	}
-	
-	.bullet-info {
-/*		background-color: black;*/
-		clear: both;
-		width: 100%;
-		height: auto;
-		padding: 0px;
-		margin: 0px;
-	}
-		
 	.content-supersub {
 		margin-top: 10px
 	}
 	
-	.staff-pos {
-		margin-top: -10px;
-		margin-right: 10px;
-	}
-		
-	#panel-img-about {
-		height: 2120px;
+	.sr-li-left {
+		width: 100%;
 	}
 	
+	.sr-li-left > li {
+		margin-left: 200px;
+	}
+	
+	.li-raise {
+		margin-top: -15px;
+	}
+	
+	#panel-img-about {
+		height: 2345px;
+	}
+	
+	#panel-img-advanced-open-water {
+		height: 1619px;
+	}
+
+	#panel-img-bull-shark-tour {
+		height: 199px;
+	}
+
 	#panel-img-certified-divers {
-		height: 2185px;
+		height: 2146px;
+	}
+	
+	#panel-img-chichen-itza {
+		height: 1148px;
+	}
+
+	#panel-img-chichen-itza-early-bird {
+		height: 1833px;
+	}
+	
+	#panel-img-contact {
+		height: 415px;	
+	}
+
+	#panel-img-discover-local-diving {
+		height: 374px;
+	}
+	
+	#panel-img-dsd {
+		height: 329px;
+	}
+
+	#panel-img-landlubber {
+		height: 3200px;
 	}
 	
 	#panel-img-padi-courses {
-		height: 2600px;
+		height: 2605px;
 	}
 
+	#panel-img-padi-diving-refresher-course {
+		height: 749px;
+	}
+
+	#panel-img-padi-open-water-diver {
+		height: 698px;
+	}
+	
+	#panel-img-sardine-run {
+		height: 709px;
+	}
+
+	#panel-img-sardine-run-pg01,
+	#panel-img-sardine-run-pg02,
+	#panel-img-sardine-run-pg03,
+	#panel-img-sardine-run-pg04,
+	#panel-img-sardine-run-pg05,
+	#panel-img-sardine-run-pg06,
+	#panel-img-sardine-run-pg07,
+	#panel-img-sardine-run-pg08,
+	#panel-img-sardine-run-pg09,
+	#panel-img-sardine-run-pg10,
+	#panel-img-sardine-run-pg11,
+	#panel-img-sardine-run-pg12,
+	#panel-img-sardine-run-pg13,
+	#panel-img-sardine-run-pg14,
+	#panel-img-sardine-run-pg15,
+	#panel-img-sardine-run-pg16,
+	#panel-img-sardine-run-pg17,
+	#panel-img-sardine-run-pg18,
+	#panel-img-sardine-run-pg19,
+	#panel-img-sardine-run-pg20 {
+		height: 919px;
+		margin-bottom: -1px;
+		display: block;
+	}
+
+	#panel-img-sardine-run-pg21 {
+		display: block;
+		height: 799px;
+	}
+
+	
+	#panel-img-padi-scuba-diver {
+		height: 895px;
+	}
+	
 	#panel-img-snorkeling-tour {
-		height: 570px;	
+		height: 594px;	
 	}
 
-	#panel-img-dsd {
-		height: 400px;
-	}
-	
 	#panel-img-whale-shark-snorkel-tour	{
-		height: 570px;
-	}
-	
-	#panel-img-bull-shark-tour {
-		height: 183px;
+		height: 435px;
 	}
 }
 
@@ -1379,10 +2091,9 @@ footer li {
 	
 	#nav-container,
 	.content-positioning,
-	.content-left,
+/*	.content-left,*/
 	#footer-container {
 		width: 750px;
-/*		background-color: darkolivegreen;*/
 	}
 	
 	#link-about {
@@ -1393,23 +2104,27 @@ footer li {
 		display: none;
 	}
 	
-	#hero {
-		height: 287px; 
-	}
-	
 	.porthole50 {
 		width: 300px;
 		transition: 500ms;
 		border-bottom: 1px solid #ccc;
-	}
-
-	.divider {
-		width: 75%;
+	}	
+	
+	.p50-uniform01,
+	.p50-uniform02 {
+		padding: 0 30px;
 	}
 	
-	.light22,
-	.light22-right {
-		margin: 0px 225px;
+	.p50-uniform04 {
+		padding: 0 80px;
+	}
+	
+	.p50-uniform08 {
+		padding: 0;
+	}
+	
+	.divider {
+		width: 75%;
 	}
 	
 	.staff-text {
@@ -1417,45 +2132,39 @@ footer li {
 	}
 	
 	.content-left {
-/*		background-color: chartreuse;*/
 		width: 100%;
 		margin: auto;
 	}
 
-	#price-header {
-/*		background-color: lightslategray;*/
-		display: block;
-		padding: 3px 0px 0px 0px;
-		margin-top: -43px;
-		margin-left: 700px;
-		margin-bottom: -100px;
-		width: 160px;
-		float: right
-	}
-		
-	#price-header > .price-large {
-		font-size: 30px;
-	}
-	
-	#content-right {
-/*		width: 100%;*/
-/*		background-color:goldenrod;*/
-/*		margin-top: 0px*/
-		display: none;
+	.brochure {
+		width: 95%;
+		height: 95%;
 	}
 
-	.content-left iframe {
-		width: 750px;
-		height: 422px;
+	#content-right {
+		display: none;
 	}
 	
+	#yt-vid {
+		width: 750px;
+		margin: 0 0 30px -375px;
+	}
+	
+	.sr-li-left {
+		margin: auto;
+		text-align: center;
+	}
+	
+	.sr-li-left > li {
+		text-align: left;
+	}
+
+	
 	footer {
-/*		background-color: red;*/
 		height: 550px;
 	}
 	
 	#footer-container {
-/*		background-color: navajowhite;*/
 		height: 370px;
 	}
 	
@@ -1464,7 +2173,6 @@ footer li {
 	}
 	
 	#footer-menu {
-/*		background-color: darkblue;*/
 		float: left;
 		width: auto;
 	}
@@ -1478,7 +2186,6 @@ footer li {
 	}
 	
 	#footer-address-bottom {
-/*		background-color: olive;*/
 		display: block;
 		margin-top: 22px;
 		padding-top: 22px;
@@ -1498,6 +2205,7 @@ footer li {
 		/* 6.4 @media				 max-width: 900px 
 ======================================================*/
 @media screen and (max-width: 900px) {
+	.content-left ul > li,
 	.standard-text {
 		text-align: center;
 	}
@@ -1506,6 +2214,24 @@ footer li {
 		text-align: justify;
 	}
 
+	#yt-vid {
+		width: 100%;
+		margin: 0 0 30px -50%;
+	}
+
+	.sr-li-left {
+		margin: auto;
+		width: 95%;
+	}
+	
+	.sr-li-left > li {
+		text-align: left !important;
+	}
+	
+	.sitemap-text > ul > li {
+		text-align: left;
+	}
+	
 	footer {
 		height: 540px;
 	}
@@ -1520,32 +2246,80 @@ footer li {
 	}
 	
 	#hoskentron {
-		background-image: url("../img/cover-vertical.jpg");
+		background-image: url("../img/cover-vertical.webp");
 	}
 	
 	nav {
 		max-width: 800px;
+		height: 50px;
+		margin-bottom: -200px;
 	}
 	
 	#nav-container {
 		display: none;
 	}
 	
+	#nav-spacer {
+		height: 50px;
+		background-color: pink;
+		margin-top: 0px;
+		margin-bottom: 0px;
+}
+	
 	#burger {
 		display: block;
 		float: left;
-		margin-left: 30px;
+		margin-top: -25px;
+		margin-left: 0px;
 	}
 	
 	nav > a {
 		float: right;
 		display: block;
-		margin: 15px 30px 0px 0px;;		
+		margin: 7px 30px 0px 0px;;		
 	}
 	
-	nav > a > img {
-		width: 70px;
-		height: 70px;
+	#flag-click {
+		display: inline-block;
+		border: none !important;
+		width: 100%;
+		margin: 0px auto;
+		text-align: center;
+		height: 50px !important;
+	}
+	
+	.flag-burger {
+		display: inline-block;
+		margin: -20px auto 0px;
+		width: 20%;
+		height: 100%;
+	}
+	
+	.flag-burger > img {
+		margin: 0px auto;
+		padding: 13px;
+		text-align: center;
+		display: block;
+	}
+	
+	#sardine-run {
+		margin-top: 49px;
+	}
+	
+	.hero-image {
+		margin-top: 74px;	
+	}
+	
+	.porthole38 {
+		height: 400px;
+	}
+	
+	.p38-uniform01 {
+		padding: 0 33px;
+	}
+
+	.p38-uniform03 {
+		padding: 0 90px;
 	}
 
 	.content-positioning,
@@ -1563,33 +2337,27 @@ footer li {
 		font-size: 30px;
 	}
 	
-	.porthole22-off {
-
+	#yt-vid {
+		width: 100%;
+		margin: 0 0 30px -50%;
 	}
-		
-	.light22,
-	.light22-right {
-/*		background-color: aliceblue;*/
+	
+	#yt-vid > iframe {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border-radius: 15px;
+	}
+	
+	.sr-li-left {
+		width: 100%;
+	}
+	
+	.sr-li-left > li {
+		margin: 0 auto 15px;
 		width: 300px;
-		margin: auto;
 	}
 	
-	.bullet22-p {
-		background-color: indigo;
-	}
-
-	.content-left iframe {
-		width: 99%;
-		height: 320px;
-		margin-left: 1%;
-		margin-right: 1%;
-	}
-	
-	#price-header {
-/*		background-color: goldenrod;*/
-		margin-top: -40px;
-		margin-left: 700px;
-	}
 }
 	
 		/*							 max-width: 600px 
@@ -1603,17 +2371,12 @@ footer li {
 	#hoskentron-top {
 		margin-bottom: 0px;
 		padding-bottom: 0px;
-/*		background-color: indianred;*/
 		height: 450px;
 	}
 	
 	#hoskentron-heading-p {
 		padding-top: 150px;
 		font-size: 80px;		
-	}
-
-	#hoskentron-bottom {
-/*		background-color: olive;*/
 	}
 		
 	#tron-link-left,
@@ -1630,38 +2393,26 @@ footer li {
 		margin-right: 0px;
 		width: 275px;
 	}
-	
+		
 	#hoskentron-social > a {
 		margin-left: 20px;
 		margin-right: 20px;
 	}
 	
-	.porthole50:last-child {
-		border: 0px solid #ccc;
-	}
-	
-	.content-left {
-/*		background-color: red;*/
-	}
-	
 	.porthole38 {
-/*		background-color: indigo;*/
 		width: 300px !important;
 	}
 	
 	.porthole38 > div {
-/*		background-color: bisque;*/
 		width: 300px;
 	}
 	
 	.content-left .bullet {
-/*		background-color: fuchsia;*/
 		width: 300px;
 		height: 300px
 	}
 	
 	.content-left .bullet-p {
-/*		background-color: saddlebrown;*/
 		width: 300px;
 	}
 	
@@ -1673,15 +2424,11 @@ footer li {
 		margin:40px auto 50px;
 	}
 	
-	.light22,
-	.light22-right {
-		float: none;
-		width: 280px;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: -0px
-	}
 	
+	.sitemap-text .blog-header-lead {
+		text-align: center;
+	}
+
 	footer {
 		height: 550px;
 	}
@@ -1716,20 +2463,19 @@ footer li {
 	#nav-logo {
 		width: 70px;
 	}
-
+	
 	#hoskentron-top {
-/*		background-color: indianred;*/
 		height: 450px;
 	}
 	
-	#hoskentron-bottom {
-/*		background-color: olive;*/
-/*		marging-top: -200px !important;*/
+	#hoskentron-social {
+		max-width: 200px;
+		margin: 50px auto 0px;
 	}
 	
 	#hoskentron-social > a {
-		margin-left: 20px;
-		margin-right: 20px;
+		margin-left: 15px;
+		margin-right: 15px;
 	}
 	
 	#hoskentron-social > a > img {
@@ -1746,32 +2492,37 @@ footer li {
 		margin-right: auto;
 	}
 	
-	.content-heading-p {
-		font-size: 60px;
-		margin-left: 20px;
-		margin-right: 20px;		
-	}
-	
 	.content-sub-p {
 		margin-left: 20px;
 		margin-right: 20px;		
 	}
 	
-	#price-header {
-		margin-right: 20px;
-	}
-	
+	p,
+	.content-left ul > li,
 	.standard-text,
 	.blog-lead{
 		font-weight: 300;
 		line-height: 40px;
 		margin-left: 20px;
 		margin-right: 20px;
-		color: #fff;
 	}
 
+	.vid-head {
+		width: 95%;
+	}
+	
+	.vid-head > iframe {
+		height: 95%;
+	}
+	
+	.banner-button > div > p {
+		font-weight: 600 !important;
+		margin-top: -5px;
+		padding: 0px;
+		height: 31px;
+	}
+	
 	.marbot {
-/*		background-color: red;*/
 		margin-left: auto;
 		margin-right: auto;
 		width: 300px;
@@ -1785,28 +2536,23 @@ footer li {
 		padding: 0px;
 	}
 	
-	.light22,
-	.light22-right {
-		margin-bottom: 30px;
-	}
-	
 	.content-supersub {
 		margin-left: 20px;
 	}
 	
-	.staff-pos {
-		clear: both;
-		float: left;
-		text-align: left;
-		margin-top: 0px;
-		margin-left: 20px;
+	.staff-img-left,
+	.staff-img-right {
+		width: 100%;
 	}
 	
-	.staff-text {
-		font-weight: 300;
-		line-height: 40px;
-		margin-left: 20px;
-		margin-right: 20px;
+	.staff-name {
+		font-size: 15px;
+		line-height: 12px;
+		padding-top: 35px
+	}
+	
+	.staff-pos {
+		font-weight:400
 	}
 	
 	.blog-img {
@@ -1822,13 +2568,28 @@ footer li {
 		margin-left: 20px;
 		margin-right: 20px;
 	}
+
+	#yt-vid {
+		width: 90%;
+		margin: 0 5% 30px -40%;
+	}
 	
-	.content-left iframe {
-		width: 88%;
-		margin-left: 5%;
-		margin-right: 5%;
+	#yt-vid > iframe {
+		width: 100%;
+		height: 90%;
 	}
 
+	.sr-li-left {
+		width: 300px;
+		text-align: center;
+		margin-left: 10%;
+	}
+	
+	.sr-li-left > li {
+		margin: 0 auto 15px;
+		text-align: center;
+	}
+	
 	footer {
 		height: 500px;
 	}
@@ -1856,6 +2617,5 @@ footer li {
 	#footer-address-bottom {
 		height: 10px;
 		margin-bottom: -50px;
-/*		background-color: darkblue;*/
 	}
 }
