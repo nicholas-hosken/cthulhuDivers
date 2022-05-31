@@ -140,15 +140,26 @@
 				<a class="item-burger" href="sitemap.html" title="Cthulhu Divers Sitemap">SITEMAP</a>
 				<a class="item-burger" href="contact.html" title="Cthulhu Divers Contact Info">CONTACT</a>
 			</div>
+<!--
 			<div id="sardine-run">
 				<br>
-				<a class="banner-button" title="Sardine Run South Africa" href="sardine-run-south-africa.html">
+				<a class="banner-button" title="Sardine Run South Africa" href="../sardine-run-south-africa.html">
 					<div>
 						<p>Sardine Run Safari April 2022</p>
 					</div>
 				</a>
 			</div>			
+-->
+			<div id="whale-shark-tour">
+				<br>
+				<a class="banner-button" title="Whale Shark Tour" href="cancun-whale-shark-snorkeling.html">
+					<div>
+						<p>Whale Shark Season 2022</p>
+					</div>
+				</a>
+			</div>			
 		</nav>
+
 		<div id="nav-spacer"></div>		
 		<!-- InstanceBeginEditable name="content" -->
 		<section class="hero-image" style="background-image:url('img/contact.webp')"></section>
@@ -168,9 +179,9 @@
 						<li><a href="padi-diving-courses-cancun.html">DIVING COURSES</a></li>
 						<li><a href="cancun-padi-scuba-diver.html">ONE DAY SCUBA COURSE</a></li>
 						<li><a href="cancun-padi-discover-scuba-diving-dsd.html">ONE DAY RESORT COURSE</a></li>
-						<li><a href="cenote-diving-cancun.html">DIVE CENOTES</a></li>
+						<li><a href="blog/cenote-angelita.html">DIVE CENOTES</a></li>
 						<li><a href="cancun-bull-shark-diving.html">DIVE WITH BULL SHARKS</a></li>
-						<li><a href="cenote-snorkeling-cancun.html">SNORKEL CENOTES</a></li>
+						<li><a href="#">SNORKEL CENOTES</a></li>
 						<li><a href="blog/cenote-angelita.html">SNORKELING DAY TRIPS</a></li>
 						<li><a href="cancun-whale-shark-snorkeling.html">WHALE SHARK SWIM</a></li>
 						<li><a href="cancun-landlubber-tours.html">LANDLUBBER TOURS</a></li>
@@ -195,7 +206,7 @@
 						else:
 					?>
 <!--					
-					<form action="contact.php" method="POST" class="form">
+					<form action="contact.html" method="POST" class="form">
 						<div class="form-group">
 							<label for="firstname" class="form-label">First Name:</label>
 							<input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name*" tabindex="1" required>

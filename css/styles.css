@@ -292,7 +292,24 @@ nav > a {
 #sardine-run {
 	border-top: 1px solid #fff;	
 	border-bottom: 1px solid #fff;
-	background-image: url("../img/sardine-run-banner.webp");
+	background-image: url("../img/banner-sardine-run.webp");
+	background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+	font-weight: 700;
+	font-size: 15px;
+	text-align: center;
+	height: 75px;
+	padding: 0 20px;
+	clear: both;
+    width: 100%;
+	text-shadow: 2px 2px #000;
+}
+
+#whale-shark-tour {
+	border-top: 1px solid #fff;	
+	border-bottom: 1px solid #fff;
+	background-image: url("../img/banner-whale-shark.webp");
 	background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -316,12 +333,19 @@ nav > a {
 }
 
 .banner-button > div:hover {
-	background-image: url("../img/flag-button.webp");
+/*	background-image: url("../img/flag-button.webp");*/
+	background-color: #fff;
+	border-color: #00aace;
 }
 
 .banner-button > div:hover > p {
+/*
 	color: #eeb30d;
 	text-shadow: 2px 2px #000;	
+*/
+	color: #00aace;
+	text-shadow: none;	
+
 }
 
 .banner-button > div > p {
@@ -555,11 +579,9 @@ nav > a {
 	clear: both;
 }
 
-.standard-text > a {
-	color: #00aace;
-}
-
-.aqua {
+.standard-text > a,
+.aqua,
+.hBlue {
 	color: #00aace;
 }
 
@@ -599,11 +621,6 @@ nav > a {
 .porthole50:hover .p50 {
 	letter-spacing: 2px;
 }
-
-.p50-uniform04 {
-	padding: 0 70px;
-}
-
 
 .porthole38 {
 	width: 245px;
@@ -652,6 +669,21 @@ nav > a {
 
 .porthole38:hover .p38 {
 	letter-spacing: 2px;
+}
+
+.p50-uniform02,
+.p50-uniform10 {
+	padding: 0 30px;
+}
+
+.p50-uniform07,
+.p50-uniform21 {
+	padding: 0 13px;
+}
+
+.p50-uniform14,
+.p50-uniform23 {
+	padding: 0 70px;
 }
 
 .bullet-dble {
@@ -1098,7 +1130,7 @@ nav > a {
 	margin: 0px 25px 40px;
 }
 
-.sitemap-text > ul > li {
+.sitemap-text div > ul > li {
 	text-align: left;
 	list-style: disc;
 }
@@ -1192,6 +1224,18 @@ nav > a {
 	clear: both;
 }
 
+.list-square {
+	margin-left: 20px;
+}
+
+.list-square > li {
+	list-style-type: square;
+}
+
+.sitemapLangSplit {
+	border: 1px solid #fff;
+	padding: 60px;
+}
 /*Panel Images
 ======================================================*/
 
@@ -1216,12 +1260,12 @@ nav > a {
 }
 
 #panel-img-chichen-itza {
-  	background-image: url(../img/pan-chichén-itzá.webp);
+  	background-image: url(../img/pan-chichen-itza.webp);
 	height: 1002px;
 }
 
 #panel-img-chichen-itza-early-bird {
-  	background-image: url(../img/pan-chichén-itzá-early-bird.webp);
+  	background-image: url(../img/pan-chichen-itza-early-bird.webp);
 	height: 1446px;
 }
 
@@ -1263,6 +1307,26 @@ nav > a {
 #panel-img-padi-scuba-diver {
   	background-image: url("../img/pan-padi-scuba-diver-course.webp");
 	height: 820px;
+}
+
+#panel-img-xcaret {
+  	background-image: url("../img/pan-xcaret.webp");
+	height: 1440px;
+}
+
+#panel-img-xplor-by-xcaret {
+  	background-image: url("../img/pan-xplor-by-xcaret.webp");
+	height: 1360px;	
+}
+
+#panel-img-xplor-fuego-by-xcaret {
+  	background-image: url("../img/pan-xplor-fuego-by-xcaret.webp");
+	height: 1360px;	
+}
+
+#panel-img-columbus-lobster-cruise {
+  	background-image: url("../img/pan-columbus-lobster-cruise.webp");
+	height: 1130px;	
 }
 
 #panel-img-sardine-run {
@@ -1384,7 +1448,7 @@ nav > a {
 
 #panel-img-sitemap {
   	background-image: url("../img/pan-sitemap.webp");
-	height: 600px;
+	height: 1040px;
 }
 
 #panel-img-snorkeling-tour {
@@ -1577,18 +1641,32 @@ footer li {
 	.p50 {
 		font-size: 20px;
 	}
-	
+		
 	.p50-uniform03,
 	.p50-uniform05,
-	.p50-uniform08 {
+	.p50-uniform06,
+	.p50-uniform09,
+	.p50-uniform13,
+	.p50-uniform21 {
 		padding: 0 30px;
 	}
 	
-	.p50-uniform06,
 	.p50-uniform07 {
-		padding: 0 50px;
+		padding: 0;
 	}
 	
+	.p50-uniform08,
+	.p50-uniform20 {
+		padding: 0 15px;
+	}
+	
+	.p50-uniform14,
+	.p50-uniform15,
+	.p50-uniform17,
+	.p50-uniform23 {
+		padding: 0 60px;
+	}
+
 	#padi-smaller {
 		width: 23px;
 		height: 22px;
@@ -1755,6 +1833,11 @@ footer li {
 		height: 856px;
 	}
 	
+	#panel-img-xplor-by-xcaret,
+	#panel-img-xplor-fuego-by-xcaret {
+		height: 1410px;	
+	}
+
 	#panel-img-sardine-run {
 		height: 650px;
 	}
@@ -1867,17 +1950,35 @@ footer li {
 
 	.p50-uniform01,
 	.p50-uniform02,
-	.p50-uniform08 {
+	.p50-uniform03,
+	.p50-uniform09,
+	.p50-uniform10 {
 		padding: 0 80px;
 	}
 	
-	.p50-uniform03,
 	.p50-uniform04,
-	.p50-uniform05,
-	.p50-uniform06 {
-		padding: 0;
+	.p50-uniform14,
+	.p50-uniform15,
+	.p50-uniform23 {
+		padding: 0 110px;
 	}
-		
+	
+	.p50-uniform06,
+	.p50-uniform08,
+	.p50-uniform11,
+	.p50-uniform12,
+	.p50-uniform16,
+	.p50-uniform19,
+	.p50-uniform21 {
+		padding: 0 60px;
+	}
+	
+	.p50-uniform20,
+	.p50-uniform22,
+	.p50-uniform25 {
+		padding: 0 40px;
+	}
+
 	#padi-smaller {
 		width: 33px;
 		height: 31px;
@@ -2034,6 +2135,15 @@ footer li {
 		height: 698px;
 	}
 	
+	#panel-img-xplor-by-xcaret,
+	#panel-img-xplor-fuego-by-xcaret {
+		height: 1500px;	
+	}
+	
+	#panel-img-columbus-lobster-cruise {
+		height: 1200px;
+	}
+
 	#panel-img-sardine-run {
 		height: 709px;
 	}
@@ -2111,9 +2221,42 @@ footer li {
 	}	
 	
 	.p50-uniform01,
-	.p50-uniform02 {
+	.p50-uniform02,
+	.p50-uniform03,
+	.p50-uniform09,
+	.p50-uniform10,
+	.p50-uniform11,
+	.p50-uniform15,
+	.p50-uniform23 {
 		padding: 0 30px;
+	}	
+	
+	.p50-uniform04,
+	.p50-uniform14 {
+		padding: 0 60px;
 	}
+
+	.p50-uniform06,
+	.p50-uniform19 {
+		padding: 0 15px;
+	}
+
+	.p50-uniform07,
+	.p50-uniform08 {
+		padding: 0 13px;
+	}
+	
+	.p50-uniform20,
+	.p50-uniform21 {
+		padding: 0 7px;
+	}
+
+	.p50-uniform22,
+	.p50-uniform25 {
+		padding: 0;
+	}
+
+/*
 	
 	.p50-uniform04 {
 		padding: 0 80px;
@@ -2122,6 +2265,7 @@ footer li {
 	.p50-uniform08 {
 		padding: 0;
 	}
+*/
 	
 	.divider {
 		width: 75%;
@@ -2228,7 +2372,7 @@ footer li {
 		text-align: left !important;
 	}
 	
-	.sitemap-text > ul > li {
+	.sitemap-text div ul li {
 		text-align: left;
 	}
 	
